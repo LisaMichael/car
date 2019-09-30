@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Car Adventures</title>
+</head>
+
+<body>
+    <h1>Car Adventures</h1>
+    <h2>Type "h" to honk, "d" to drive to work, "w" to drive around the world, or "t" to get a tuneup.</h2>
+    <h2>See console for stats!</h2>
+
+    <script>"type=text/javascript"
+
+        // create the car object 
+        let car = {
+            make: "Honda",
+            model: "Fit",
+            color: "Blue Rasberry",
+            mileage: 3000,
+            isWorking: true,
+            honk: function () {
+                alert("HOOOOONK!");
+            },
+            driveToWork: function () {
+                alert("Old mileage: " + car.mileage);
+
+                car.mileage = car.mileage + 8;
+                alert("New mileage: " + car.mileage);
+            },
+            driveAroundWorld: function () {
+                alert("Old mileage: " + car.mileage);
+
+                car.mileage = car.mileage + 8000;
+                alert("New mileage: " + car.mileage);
+                alert("Car needs a tuneup!")
+
+                car.isWorking = false;
+            },
+            getTuneUp: function () {
+                alert("Car is ready to go!");
+                car.isWorking = true;
+            }
+        }
+
+function writeStats() {
+    console.log("Make: " + car.make);
+    console.log("Model: " + car.model);
+    console.log("Color: " + car.color);
+    console.log("Mileage: " + car.mileage);
+    console.log("Is working: " + car.isWorking);
+    console.log("_____________________________________");
+}
+
+// when key is pressed, on key up, display the string  
+// of whatever is pressed and turn to string and make it lowercase
+
+document.onkeyup = function(event) {
+    let letter = String.fromCharCode(event.keyCode).toLowerCase();
+    alert(letter);
+}
+     // testing functions
+     // car.honk(); 
+     // car.driveToWork();
+     // car.driveAroundWorld();
+     // car.getTuneUp();
+    // writeStats();
+
+    </script>
+</body>
+
+</html>
