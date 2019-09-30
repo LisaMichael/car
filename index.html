@@ -61,7 +61,7 @@ function writeStats() {
 document.onkeyup = function(event) {
     let letter = String.fromCharCode(event.keyCode).toLowerCase();
     alert(letter);
-}
+
      // testing functions
      // car.honk(); 
      // car.driveToWork();
@@ -69,6 +69,27 @@ document.onkeyup = function(event) {
      // car.getTuneUp();
     // writeStats();
 
+
+ if (letter == "h") {
+     car.honk();
+     writeStats();
+ }
+
+ if (letter == "d") {
+     car.driveToWork();
+     writeStats();
+ }
+
+ if (letter == "w") {
+     car.driveAroundWorld();
+     writeStats();
+ }
+
+ if (letter == "t") {
+     car.getTuneUp();
+     writeStats();
+ }
+}
     </script>
 </body>
 
